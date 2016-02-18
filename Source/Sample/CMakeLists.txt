@@ -19,6 +19,8 @@ target_link_libraries(
       ziplib
   )
 
+include_directories( ${CMAKE_CURRENT_LIST_DIR} ${ZipLib_INCLUDE_DIR} )
+
 set_property(
     TARGET ziplib_Sample
     PROPERTY CXX_STANDARD 11

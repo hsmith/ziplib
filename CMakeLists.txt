@@ -13,3 +13,9 @@ cmake_minimum_required( VERSION 3.0.0 )
 project( ziplib )
 
 add_subdirectory( Source )
+
+set( 
+    ZipLib_INCLUDE_DIR
+    ${CMAKE_CURRENT_LIST_DIR}/Source
+    CACHE STRING "ZipLib Include Directories"
+  )
