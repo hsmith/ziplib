@@ -9,7 +9,6 @@
 ###############################################################################
 
 if( WIN32 )
-  message( "BUILDING WIN32" )
   include_directories( ${CMAKE_CURRENT_LIST_DIR} )
   file(
       GLOB
@@ -18,7 +17,6 @@ if( WIN32 )
         *.c
     )
 else()
-  message( "BUILDING POSIX" )
   include_directories( ${CMAKE_CURRENT_LIST_DIR}/unix )
   file(
     GLOB_RECURSE
@@ -27,8 +25,5 @@ else()
       unix/*.c
   )
 endif()
-
-
-message( "LZMA Sources: " ${lzma_SOURCES} )
 
 add_library( lzma ${lzma_SOURCES} )
