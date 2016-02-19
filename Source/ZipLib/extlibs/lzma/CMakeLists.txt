@@ -27,3 +27,8 @@ else()
 endif()
 
 add_library( lzma ${lzma_SOURCES} )
+
+if( UNIX AND NOT APPLE )
+  find_package( Threads REQUIRED )
+  target_link_libraries( lzma ${CMAKE_THREAD_LIBS_INIT} )
+endif()
