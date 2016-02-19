@@ -32,6 +32,8 @@ namespace detail
         return delta;
       }
 
+      bool is_init() const { return _stream != nullptr; }
+
       size_t get_bytes_written() const { return _bytesWritten; }
 
       const stream_t& get_stream() const { return *_stream; }

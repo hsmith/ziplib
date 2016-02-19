@@ -51,7 +51,7 @@ class basic_lzma_encoder
 
     bool is_init() const override
     {
-      return &_ostream.get_stream() != nullptr;
+      return _ostream.is_init();
     }
 
     size_t get_bytes_read() const override
